@@ -1,0 +1,142 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    height: 100vh;
+    background: rgb(39, 41, 68);
+    font-family: sans-serif;
+}
+.score{
+    color: rgb(224, 224, 224);
+    height:20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.score h2{
+    font-size: 30px;
+}
+.score p{
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+}
+.intro{
+    color: rgb(224, 224, 224);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height:50vh;
+    cursor:pointer;
+    transition: opacity 0.5s ease;
+}
+.intro h1{
+    font-size: 50px;
+}
+.intro button, .match button{
+    width: 150px;
+    height: 50px;
+    color: rgb(224, 224, 224);
+    background: rgb(45, 117, 96);
+    border:none;
+    border-radius: 3px;
+    font-size: 20px;
+    cursor:pointer;
+}
+.match{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s ease 0.5s;
+}
+.winner{
+    color: rgb(224, 224, 224);
+    text-align: center;
+    font-size: 50px;
+}
+.hands, .option{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.player-hand, .computer-hand{
+    width: 20%;
+    height: 20%;
+}
+div.fadeOut{
+    opacity: 0;
+    pointer-events: none;
+}
+div.fadeIn{
+    opacity: 1;
+    pointer-events: all;
+}
+.options{
+    margin: 0% 10% 0% 17%;
+    padding: 0%;
+}
+
+@keyframes shakePlayer{
+    0%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+     15%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+     25%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+     35%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+     5o%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+     65%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+      75%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+      85%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+      100%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+}
+
+@keyframes shakeComputer{
+    0%{
+        transform:  translateY(0px);
+    }
+     15%{
+        transform:  translateY(-50px);
+    }
+     25%{
+        transform: translateY(0px);
+    }
+     35%{
+        transform:  translateY(-50px);
+    }
+     5o%{
+        transform:  translateY(0px);
+    }
+     65%{
+        transform:  translateY(-50px);
+    }
+      75%{
+        transform:  translateY(0px);
+    }
+      85%{
+        transform:  translateY(-50px);
+    }
+      100%{
+        transform:  translateY(0px);
+    }
+}
